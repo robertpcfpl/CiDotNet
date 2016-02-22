@@ -1,0 +1,21 @@
+<Project DefaultTargets="Build;Test;" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!--Default Configuration-->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+
+    <!--Default Platform-->
+    <Platform Condition=" '$(Platform)' == '' ">"Any CPU"</Platform>
+
+    <!--Test assemblies-->
+    <TestAssemblies>CiDotNet.Calc.Test\bin\$(Configuration)\CiDotNet.Calc.Test.dll</TestAssemblies>
+  </PropertyGroup>
+  
+  <Target Name="Build" >
+    <MSBuild Targets="Clean;Rebuild" Projects="CiDotNet.sln" ContinueOnError="false"/>
+  </Target>
+
+  <Target Name="Test" >
+    <Exec Command="packages\NUnit.Runners.2.6.4\tools\nunit-console.exe $(TestAssemblies) /xml:NUnitReport.xml"/>
+  </Target>
+  
+</Project>
