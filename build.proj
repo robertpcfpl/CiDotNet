@@ -11,6 +11,7 @@
   </PropertyGroup>
   
   <Target Name="Build" >
+    <Exec Command="tools\nuget.exe restore CiDotNet.sln"/>
     <MSBuild Targets="Clean;Rebuild" Projects="CiDotNet.sln" ContinueOnError="false"/>
   </Target>
 
