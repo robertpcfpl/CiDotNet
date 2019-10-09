@@ -1,4 +1,6 @@
-﻿namespace CiDotNet.Calc.Math
+﻿using System;
+
+namespace CiDotNet.Calc.Math
 {
     public class Finance
     {
@@ -56,6 +58,7 @@
                 /
                 ((1.0 + ((periodicInterestRate * m) / 100)) * CalculateUSPV(compoundPeriods, periodicInterestRate))
                 );
+
         }
 
     }

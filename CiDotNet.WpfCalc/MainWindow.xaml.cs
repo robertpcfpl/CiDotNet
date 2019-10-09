@@ -41,5 +41,11 @@ namespace CiDotNet.WpfCalc
                 MessageBox.Show(ex.Message, "Error in calculation", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            CiDotNet.Calc.Wibor.WiborProvider wiborProvider = new Calc.Wibor.WiborProvider(new GpwBenchmarkplWiborService());
+            interestRateTextBox.Text = wiborProvider.Wibor3M().ToString();
+        }
     }
 }

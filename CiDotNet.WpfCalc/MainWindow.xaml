@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CiDotNet.WpfCalc"
         mc:Ignorable="d"
-        Title="CiDotNet - Leasing Calculation" Height="259.79" Width="354.371">
-    <Grid RenderTransformOrigin="0.623,0.514" Margin="0,0,68,-1.333">
+        Title="CiDotNet - Leasing Calculation" Height="252.166" Width="396.007">
+    <Grid RenderTransformOrigin="0.623,0.514" Margin="0,0,5.5,-1.5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="259*"/>
             <ColumnDefinition Width="260*"/>
@@ -17,7 +17,7 @@
         <TextBox x:Name="residualValueTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.667,69,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label_Copy1" Content="Residual value" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy2" Content="Interest rate" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="interestRateTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.667,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="interestRateTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.5,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="paymentTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.667,192,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label_Copy3" Content="Payment" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="durationComboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="9.667,42,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="1">
@@ -32,6 +32,7 @@
         <Label x:Name="label_Copy4" Content="Calculation mode" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="beginnRadioButton" Content="beginning of a period" Grid.Column="1" HorizontalAlignment="Left" Margin="9.667,125,0,0" VerticalAlignment="Top" GroupName="calcModeRedioButtonGroup" IsChecked="True"/>
         <RadioButton x:Name="endRadioButton" Content="end of a period" Grid.Column="1" HorizontalAlignment="Left" Margin="9.667,145,0,0" VerticalAlignment="Top" GroupName="calcModeRedioButtonGroup"/>
+        <Button Content="WIBOR" Grid.Column="1" HorizontalAlignment="Left" Margin="131.5,97,0,0" VerticalAlignment="Top" Width="52" Click="Button_Click_1" RenderTransformOrigin="0.216,0.585"/>
 
     </Grid>
 </Window>

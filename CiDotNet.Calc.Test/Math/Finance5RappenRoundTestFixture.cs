@@ -1,12 +1,11 @@
 ﻿using NUnit.Framework;
 using CiDotNet.Calc.Math;
-
 namespace CiDotNet.Calc.Test.Math
 {
     [TestFixture]
     public class Finance5RappenRoundTestFixture
     {
-        [TestCase]
+        [Test]
         public void CalculateRate5RappenRound()
         {
             int Duration = 12;

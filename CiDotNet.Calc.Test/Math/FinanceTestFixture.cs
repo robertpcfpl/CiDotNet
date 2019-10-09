@@ -1,12 +1,11 @@
 ﻿using NUnit.Framework;
 using CiDotNet.Calc.Math;
-
 namespace CiDotNet.Calc.Test.Math
 {
     [TestFixture]
-    public class FinanceRateTestFixture
+    public class FinanceTestFixture
     {
-        [TestCase]
+        [Test]
         public void CalculateRate()
         {
             int Duration = 12;
@@ -21,7 +20,5 @@ namespace CiDotNet.Calc.Test.Math
 
             Assert.AreEqual(ExpectedRate, ActualRate);
         }
-
-
     }
 }

@@ -16,7 +16,7 @@
   </Target>
 
   <Target Name="Test" >
-    <Exec Command="packages\NUnit.Runners.2.6.4\tools\nunit-console.exe $(TestAssemblies) /xml:NUnitReport.xml"/>
+    <Exec Command="packages\NUnit.ConsoleRunner.3.10.0\tools\nunit3-console.exe $(TestAssemblies)"/>
   </Target>
   
 </Project>
