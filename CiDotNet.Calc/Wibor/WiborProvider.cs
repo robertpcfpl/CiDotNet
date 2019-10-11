@@ -14,6 +14,5 @@
             return xborService.ProvideInterbankOfferedRate3M();
         }
 
-
     }
 }
