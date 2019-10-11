@@ -57,7 +57,7 @@ namespace CiDotNet.Calc.Math
                 (finalValue * CalculateSPPV(compoundPeriods, periodicInterestRate) - presentValue)
                 /
                 ((1.0 + ((periodicInterestRate * m) / 100)) * CalculateUSPV(compoundPeriods, periodicInterestRate))
-                ) + 1;
+                );
 
         }
 
