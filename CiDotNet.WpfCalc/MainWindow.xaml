@@ -5,22 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CiDotNet.WpfCalc"
         mc:Ignorable="d"
-        Title="CiDotNet - Leasing Calculation" Height="252.166" Width="396.007">
+        Title="CiDotNet - Sample app" Height="256" Width="391">
     <Grid RenderTransformOrigin="0.623,0.514" Margin="0,0,5.5,-1.5">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="259*"/>
-            <ColumnDefinition Width="260*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="157*"/>
+            <ColumnDefinition Width="193*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="label" Content="Price" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="priceTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.667,14,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label_Copy" Content="Duration" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="residualValueTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.667,69,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label_Copy1" Content="Residual value" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy2" Content="Interest rate" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="interestRateTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.5,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="paymentTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.667,192,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label_Copy3" Content="Payment" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="durationComboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="9.667,42,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="1">
+        <Label x:Name="label" Content="Price" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="priceTextBox" Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="10,14,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label_Copy" Content="Duration" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="residualValueTextBox" Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="10,69,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label_Copy1" Content="Residual value" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Label x:Name="label_Copy2" Content="Interest rate" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="interestRateTextBox" Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="10,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="paymentTextBox" Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="10,192,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label_Copy3" Content="Payment" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <ComboBox x:Name="durationComboBox" Grid.Column="3" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="1">
             <ListBoxItem Content="6"/>
             <ListBoxItem Content="12"/>
             <ListBoxItem Content="18"/>
@@ -28,11 +30,11 @@
             <ListBoxItem Content="30"/>
             <ListBoxItem Content="36"/>
         </ComboBox>
-        <Button x:Name="button" Content="Calculate" Grid.Column="1" HorizontalAlignment="Left" Margin="9.667,167,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.042,1.107" Click="button_Click"/>
-        <Label x:Name="label_Copy4" Content="Calculation mode" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="beginnRadioButton" Content="beginning of a period" Grid.Column="1" HorizontalAlignment="Left" Margin="9.667,125,0,0" VerticalAlignment="Top" GroupName="calcModeRedioButtonGroup" IsChecked="True"/>
-        <RadioButton x:Name="endRadioButton" Content="end of a period" Grid.Column="1" HorizontalAlignment="Left" Margin="9.667,145,0,0" VerticalAlignment="Top" GroupName="calcModeRedioButtonGroup"/>
-        <Button Content="WIBOR" Grid.Column="1" HorizontalAlignment="Left" Margin="131.5,97,0,0" VerticalAlignment="Top" Width="52" Click="Button_Click_1" RenderTransformOrigin="0.216,0.585"/>
+        <Button x:Name="button" Content="Calculate" Grid.Column="3" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.042,1.107" Click="button_Click"/>
+        <Label x:Name="label_Copy4" Content="Calculation mode" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <RadioButton x:Name="beginnRadioButton" Content="beginning of a period" Grid.Column="3" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" GroupName="calcModeRedioButtonGroup" IsChecked="True"/>
+        <RadioButton x:Name="endRadioButton" Content="end of a period" Grid.Column="3" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" GroupName="calcModeRedioButtonGroup"/>
+        <Button Content="WIBOR" Grid.Column="3" HorizontalAlignment="Left" Margin="132,97,0,0" VerticalAlignment="Top" Width="52" Click="Button_Click_1" RenderTransformOrigin="0.216,0.585"/>
 
     </Grid>
 </Window>

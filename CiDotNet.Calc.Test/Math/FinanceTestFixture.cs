@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using CiDotNet.Calc.Math;
+
 namespace CiDotNet.Calc.Test.Math
 {
     [TestFixture]
@@ -16,7 +16,7 @@ namespace CiDotNet.Calc.Test.Math
             CiDotNet.Calc.Math.Finance.Mode mode = CiDotNet.Calc.Math.Finance.Mode.BeginMode;
 
             double ExpectedRate = 2586.556528260553;
-            double ActualRate = Finance.CalculateRate(Duration, Ppy, PeriodicInterestRate, presentValue, finalValue, mode);
+            double ActualRate = Calc.Math.Finance.CalculateRate(Duration, Ppy, PeriodicInterestRate, presentValue, finalValue, mode);
 
             Assert.AreEqual(ExpectedRate, ActualRate);
         }

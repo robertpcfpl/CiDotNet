@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CiDotNet.Calc.Math
+﻿namespace CiDotNet.Calc.Math
 {
     public class Finance
     {

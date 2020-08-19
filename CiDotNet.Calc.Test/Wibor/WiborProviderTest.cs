@@ -1,9 +1,9 @@
-﻿using NUnit.Framework;
+﻿using CiDotNet.Calc.Wibor;
+using Moq;
+using NUnit.Framework;
+
 namespace CiDotNet.Calc.Test.Wibor
 {
-    using CiDotNet.Calc.Wibor;
-    using Moq;
-
     [TestFixture]
     class WiborProviderTest
     {

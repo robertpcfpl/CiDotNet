@@ -1,18 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiDotNet.WpfCalc", "CiDotNet.WpfCalc\CiDotNet.WpfCalc.csproj", "{D55A06AC-7BBB-4866-B147-864351E29AAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CiDotNet.WpfCalc", "CiDotNet.WpfCalc\CiDotNet.WpfCalc.csproj", "{181BB1D3-4523-4D9F-BFFF-DB8D921CC3B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiDotNet.Calc", "CiDotNet.Calc\CiDotNet.Calc.csproj", "{A5C163B2-A6BA-41A7-A88F-4B34DBB1D6E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CiDotNet.Calc", "CiDotNet.Calc\CiDotNet.Calc.csproj", "{6A5AF98B-A648-45C1-B6ED-8FE22F760D4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiDotNet.Calc.Test", "CiDotNet.Calc.Test\CiDotNet.Calc.Test.csproj", "{B2BCE76D-6087-4585-A615-527C0B1FF471}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{89EBBA17-ED19-46F7-968B-ED2DAAF10A0F}"
-	ProjectSection(SolutionItems) = preProject
-		build.proj = build.proj
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CiDotNet.Calc.Test", "CiDotNet.Calc.Test\CiDotNet.Calc.Test.csproj", "{D6A0F186-DD60-4983-AB60-192266AED57F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,23 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D55A06AC-7BBB-4866-B147-864351E29AAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D55A06AC-7BBB-4866-B147-864351E29AAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D55A06AC-7BBB-4866-B147-864351E29AAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D55A06AC-7BBB-4866-B147-864351E29AAF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A5C163B2-A6BA-41A7-A88F-4B34DBB1D6E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5C163B2-A6BA-41A7-A88F-4B34DBB1D6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A5C163B2-A6BA-41A7-A88F-4B34DBB1D6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A5C163B2-A6BA-41A7-A88F-4B34DBB1D6E2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B2BCE76D-6087-4585-A615-527C0B1FF471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B2BCE76D-6087-4585-A615-527C0B1FF471}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B2BCE76D-6087-4585-A615-527C0B1FF471}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B2BCE76D-6087-4585-A615-527C0B1FF471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{181BB1D3-4523-4D9F-BFFF-DB8D921CC3B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{181BB1D3-4523-4D9F-BFFF-DB8D921CC3B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{181BB1D3-4523-4D9F-BFFF-DB8D921CC3B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{181BB1D3-4523-4D9F-BFFF-DB8D921CC3B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A5AF98B-A648-45C1-B6ED-8FE22F760D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5AF98B-A648-45C1-B6ED-8FE22F760D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5AF98B-A648-45C1-B6ED-8FE22F760D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5AF98B-A648-45C1-B6ED-8FE22F760D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6A0F186-DD60-4983-AB60-192266AED57F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A0F186-DD60-4983-AB60-192266AED57F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A0F186-DD60-4983-AB60-192266AED57F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A0F186-DD60-4983-AB60-192266AED57F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {60A1304C-B610-4BBE-8674-1EFF22F3F32F}
+		SolutionGuid = {D3274EF5-28C6-438D-BC2F-3A60F818DCC9}
 	EndGlobalSection
 EndGlobal

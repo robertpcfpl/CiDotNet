@@ -5,7 +5,7 @@
         private IXiborService xborService;
 
         public WiborProvider(IXiborService xborService)
-        { 
+        {
             this.xborService = xborService;
         }
 

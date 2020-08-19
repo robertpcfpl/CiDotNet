@@ -33,7 +33,7 @@ namespace CiDotNet.WpfCalc
                 double interest = double.Parse(interestRateTextBox.Text);
                 double presentValue = double.Parse(priceTextBox.Text);
                 double residualValue = double.Parse(residualValueTextBox.Text);
-                Calc.Math.Finance.Mode mode = beginnRadioButton.IsChecked.GetValueOrDefault(true) ? Calc.Math.Finance.Mode.BeginMode : CiDotNet.Calc.Math.Finance.Mode.EndMode;
+                CiDotNet.Calc.Math.Finance.Mode mode = beginnRadioButton.IsChecked.GetValueOrDefault(true) ? CiDotNet.Calc.Math.Finance.Mode.BeginMode : CiDotNet.Calc.Math.Finance.Mode.EndMode;
                 paymentTextBox.Text = CiDotNet.Calc.Math.RoundHelper.Round5Rappen((decimal)CiDotNet.Calc.Math.Finance.CalculateRate(duration, 12, interest, presentValue, residualValue, mode)).ToString("0.00");
             }
             catch (Exception ex)
@@ -44,7 +44,7 @@ namespace CiDotNet.WpfCalc
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            CiDotNet.Calc.Wibor.WiborProvider wiborProvider = new Calc.Wibor.WiborProvider(new GpwBenchmarkplWiborService());
+            CiDotNet.Calc.Wibor.WiborProvider wiborProvider = new CiDotNet.Calc.Wibor.WiborProvider(new GpwBenchmarkplWiborService());
             interestRateTextBox.Text = wiborProvider.Wibor3M().ToString();
         }
     }
