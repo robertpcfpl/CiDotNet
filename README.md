@@ -1,2 +1,2 @@
 # CiDotNet
-Examples for sort CI in .NET presentation
+Examples for schort CI in .NET presentation
