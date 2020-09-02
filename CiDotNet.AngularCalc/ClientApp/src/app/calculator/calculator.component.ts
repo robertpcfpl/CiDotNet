@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators} from '@angular/forms';
-import { CalculationData } from './calculation-data';
+import { CalculationData } from './models/calculation-data';
 import { CalculationService } from './calculation.service';
 
 @Component({
@@ -31,7 +31,7 @@ export class CalculatorComponent implements OnInit {
     const result: CalculationData = Object.assign({}, this.calcForm.value);
 
     this.calculationService.postCalculationData(result).then(result => {
-      this.payment = result;     
+      this.payment = result.result;     
       },
        error => {
         console.log(error);
@@ -42,7 +42,7 @@ export class CalculatorComponent implements OnInit {
 
   wiborClick() {
     this.calculationService.getWibor().then(result => {
-      this.f.interestRate.setValue(result);
+      this.f.interestRate.setValue(result.result);
       },
        error => {
         console.log(error);

@@ -16,20 +16,26 @@ namespace CiDotNet.AngularCalc.Controllers
         }
 
         [HttpPost]
-        public ActionResult<string> Calculate([FromBody] CalculationDataDto calculationData)
+        public ActionResult<CalculationResultDto> Calculate([FromBody] CalculationDataDto calculationData)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest("Invalid form data");
             }
             var result = CiDotNet.Calc.Math.RoundHelper.Round5Rappen((decimal)CiDotNet.Calc.Math.Finance.CalculateRate(calculationData.Duration, 12, calculationData.InterestRate, calculationData.Price, calculationData.ResidualValue, calculationData.CalculationMode)).ToString("0.00");
-            return Ok(result);
+            return Ok(new CalculationResultDto()
+            {
+                Result = result
+            });
         }
 
-        [HttpGet]
-        public string GetWiborInterestRate()
+        [HttpGet("GetWiborInterestRate")]
+        public WiborReusltDto GetWiborInterestRate()
         {
-            return wiborProvider.Wibor3M().ToString();
+            return new WiborReusltDto()
+            {
+                result = wiborProvider.Wibor3M().ToString()
+            };
         }
     }
 }

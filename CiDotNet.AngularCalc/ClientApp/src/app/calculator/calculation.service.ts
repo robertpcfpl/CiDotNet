@@ -20,7 +20,7 @@ export class CalculationService {
   }
 
   getWibor(): Promise<any> {
-    return this.http.get(this.baseUrl.concat('api/calculation'))
+    return this.http.get(this.baseUrl.concat('api/calculation/GetWiborInterestRate'))
       .pipe(catchError((err) => {
         console.log(err);
         return throwError(err);
