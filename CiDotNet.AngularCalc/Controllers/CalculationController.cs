@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CiDotNet.AngularCalc.Models;
+﻿using CiDotNet.AngularCalc.Models;
 using CiDotNet.Calc.Wibor;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CiDotNet.AngularCalc.Controllers
