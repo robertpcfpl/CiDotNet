@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace CiDotNet.WpfCalc
 {
-    public class GpwBenchmarkplWiborService : IXiborService
+    public class GpwBenchmarkplWiborServiceOld : IXiborService
     {
         public decimal ProvideInterbankOfferedRate3M()
         {

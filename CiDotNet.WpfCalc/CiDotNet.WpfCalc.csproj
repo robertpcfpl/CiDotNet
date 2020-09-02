@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CiDotNet.Calc\CiDotNet.Calc.csproj" />
+    <ProjectReference Include="..\CiDotNet.GpwBenchmarkplWibor\CiDotNet.GpwBenchmarkplWibor.csproj" />
   </ItemGroup>
 
 </Project>

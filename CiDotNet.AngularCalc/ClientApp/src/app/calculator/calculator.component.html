@@ -46,7 +46,7 @@
                 <span *ngIf="f.interestRate.errors?.pattern">Enter valid number only</span>
               </div>
             </div>
-          <div class="col-sm-2"><input type="button" value="WIBOR"></div>
+          <div class="col-sm-2"><button type="button" class="btn btn-success" (click)="wiborClick()">WIBOR</button></div>
         </div>
 
         <div class="row justify-content-center mt-1">
@@ -69,13 +69,13 @@
 
           <div class="row justify-content-end mt-1">
             <div class="col-sm-6">
-              <button type="submit" class="btn btn-primary">Calculate</button>
+              <button type="submit" class="btn btn-primary form-control mt-2">Calculate</button>
             </div>
           </div>
 
           <div class="row justify-content-center mt-3 border-top border-dark pt-3">
             <div class="col-sm">Payment</div>
-            <div class="col-sm"><input type="text" value="{{payment}}"></div>
+            <div class="col-sm"><input class="form-control" type="text" value="{{payment}}" disabled></div>
           </div>
 
         </div>

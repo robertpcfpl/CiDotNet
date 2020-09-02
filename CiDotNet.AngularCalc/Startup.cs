@@ -1,6 +1,7 @@
+using CiDotNet.Calc.Wibor;
+using CiDotNet.GpwBenchmarkplWibor;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +22,8 @@ namespace CiDotNet.AngularCalc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews().AddNewtonsoftJson();
+            services.AddTransient<IXiborService, GpwBenchmarkplWiborService>();
+            services.AddTransient<WiborProvider>();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

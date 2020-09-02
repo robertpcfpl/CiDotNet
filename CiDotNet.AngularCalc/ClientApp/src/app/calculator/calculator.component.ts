@@ -31,7 +31,7 @@ export class CalculatorComponent implements OnInit {
     const result: CalculationData = Object.assign({}, this.calcForm.value);
 
     this.calculationService.postCalculationData(result).then(result => {
-      this.payment = result;
+      this.payment = result;     
       },
        error => {
         console.log(error);
@@ -39,6 +39,15 @@ export class CalculatorComponent implements OnInit {
   }
 
   get f() { return this.calcForm.controls; }
+
+  wiborClick() {
+    this.calculationService.getWibor().then(result => {
+      this.f.interestRate.setValue(result);
+      },
+       error => {
+        console.log(error);
+    });
+  }
 
   createFormGroup() {
     return this.formBuilder.group({
