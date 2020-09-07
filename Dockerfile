@@ -26,6 +26,8 @@ FROM build AS publish
 RUN dotnet publish "CiDotNet.AngularCalc.csproj" -c Release -o /app/publish
 
 FROM base AS final
+RUN sed -i '$ d' /usr/lib/ssl/openssl.cnf
+RUN echo 'CipherString = DEFAULT:@SECLEVEL=1' >> /usr/lib/ssl/openssl.cnf
 WORKDIR /app
 COPY --from=publish /app/publish .
 COPY --from=client /app/dist /app/ClientApp/dist

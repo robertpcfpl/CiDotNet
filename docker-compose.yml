@@ -2,12 +2,14 @@ version: '3.4'
 
 services:
   cidotnet.angularcalc:
+    depends_on:
+      - "cidotnet.angular.app"
     image: ${DOCKER_REGISTRY-}cidotnetangularcalc
     build:
       context: .
       dockerfile: CiDotNet.AngularCalc/Dockerfile
       args:
-        - skip_client_build=false
+        - skip_client_build=true
   cidotnet.angular.app:
     image: ${DOCKER_REGISTRY-}cidotnetangularapp
     build:
