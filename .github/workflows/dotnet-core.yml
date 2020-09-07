@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore CiDotNet.sln
     - name: Build
-      run: dotnet build --configuration Release --no-restore -p:Version=${{ github.run_number }}
+      run: dotnet build CiDotNet.sln --configuration Release --no-restore -p:Version=${{ github.run_number }}
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test CiDotNet.sln --no-restore --verbosity normal
