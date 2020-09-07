@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CiDotNet.Calc.Test", "CiDot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CiDotNet.AngularCalc", "CiDotNet.AngularCalc\CiDotNet.AngularCalc.csproj", "{D116EC68-6230-4875-BB4F-5DBAAD51100F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiDotNet.GpwBenchmarkplWibor", "CiDotNet.GpwBenchmarkplWibor\CiDotNet.GpwBenchmarkplWibor.csproj", "{42E8A014-3624-4CA9-AAA8-E81653413121}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CiDotNet.GpwBenchmarkplWibor", "CiDotNet.GpwBenchmarkplWibor\CiDotNet.GpwBenchmarkplWibor.csproj", "{42E8A014-3624-4CA9-AAA8-E81653413121}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E8DF21FA-7C9F-470D-863E-BF55B9AA68B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{42E8A014-3624-4CA9-AAA8-E81653413121}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42E8A014-3624-4CA9-AAA8-E81653413121}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42E8A014-3624-4CA9-AAA8-E81653413121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8DF21FA-7C9F-470D-863E-BF55B9AA68B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8DF21FA-7C9F-470D-863E-BF55B9AA68B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8DF21FA-7C9F-470D-863E-BF55B9AA68B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8DF21FA-7C9F-470D-863E-BF55B9AA68B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
