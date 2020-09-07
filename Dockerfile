@@ -6,7 +6,7 @@ EXPOSE 80
 EXPOSE 443
 
 FROM node:10.15-alpine AS client 
-ARG skip_client_build=true 
+ARG skip_client_build=false 
 WORKDIR /app 
 COPY CiDotNet.AngularCalc/ClientApp . 
 RUN [[ ${skip_client_build} = true ]] && echo "Skipping npm install" || npm install 
@@ -28,5 +28,5 @@ RUN dotnet publish "CiDotNet.AngularCalc.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-#COPY --from=client /app/dist /app/dist
+COPY --from=client /app/dist /app/ClientApp/dist
 ENTRYPOINT ["dotnet", "CiDotNet.AngularCalc.dll"]
