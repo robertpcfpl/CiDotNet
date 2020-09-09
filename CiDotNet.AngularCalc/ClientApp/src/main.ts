@@ -1,11 +1,18 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { isDevMode } from '@angular/core';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
+const api_prod_url= 'http://localhost:4250/'
 export function getBaseUrl() {
-  return document.getElementsByTagName('base')[0].href;
+  if(isDevMode()) {
+    return document.getElementsByTagName('base')[0].href;
+  }
+  else {
+    return api_prod_url;
+  };
 }
 
 const providers = [
