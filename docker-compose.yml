@@ -4,11 +4,11 @@ services:
   cidotnet.angularcalc:
     depends_on:
       - "cidotnet.angular.app"
-    image: rpetlakcfpl/angular-calc-api
+    image: robertpcfpl/angular-calc-api
     ports:
       - "4250:80" 
   cidotnet.angular.app:
-    image: rpetlakcfpl/angular-calc-app
+    image: robertpcfpl/angular-calc-app
     ports:
       - "4200:80" 
 
