@@ -1,17 +1,8 @@
 FROM node:14.9.0-alpine3.10 AS builder
 
-COPY package.json package-lock.json ./
-#RUN apk add --no-cache --virtual .gyp \
-#        python \
-#        make \
-#        g++ \
-#    && npm install \
-#    && apk del .gyp
-RUN npm install
-RUN mkdir /app && mv ./node_modules ./app
-
 WORKDIR /app
 COPY . .
+RUN npm install
 RUN npm run ng build -- --prod --output-path=dist
 
 FROM nginx:1.19.2-alpine
