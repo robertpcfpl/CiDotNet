@@ -38,4 +38,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: rpetlakcfpl/angular-calc-app
           tags: latest
-          dockerfile: ./CiDotNet.AngularCalc/ClientApp/Dockerfile
+          dockerfile: ./Dockerfile-angular
