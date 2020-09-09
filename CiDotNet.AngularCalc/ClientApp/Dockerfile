@@ -1,7 +1,13 @@
 FROM node:14.9.0-alpine3.10 AS builder
 
 COPY package.json package-lock.json ./
-RUN npm install && mkdir /app && mv ./node_modules ./app
+RUN apk add --no-cache --virtual .gyp \
+        python \
+        make \
+        g++ \
+    && npm install \
+    && apk del .gyp
+RUN mkdir /app && mv ./node_modules ./app
 
 WORKDIR /app
 COPY . .
