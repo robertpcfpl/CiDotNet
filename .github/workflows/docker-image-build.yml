@@ -31,15 +31,8 @@ jobs:
       - name: Build and push Net Core Api Docker image
         uses: docker/build-push-action@v2
         with:
-          context: .
-          push: true
+          push: false
           tags: robertpcfpl/angular-calc-api:latest
+          context: .
           file: ./Dockerfile
-          
-      - name: Build and push Angular App Docker image
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: rpetlakcfpl/angular-calc-app:latest
-          context: ./CiDotNet.AngularCalc/ClientApp/
-          file: ./CiDotNet.AngularCalc/ClientApp/Dockerfile
+
