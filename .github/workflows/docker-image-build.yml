@@ -22,21 +22,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build and push Net Core Api Docker image
-        uses: docker/build-push-action@v1.1.1
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+          
+      - name: Build and push Net Core Api Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
           repository: robertpcfpl/angular-calc-api
           tags: latest
-          dockerfile: ./Dockerfile
+          file: ./Dockerfile
           
       - name: Build and push Angular App Docker image
-        uses: docker/build-push-action@v1.1.1
+        uses: docker/build-push-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          push: true
           repository: rpetlakcfpl/angular-calc-app
           tags: latest
           context: ./CiDotNet.AngularCalc/ClientApp/
-          dockerfile: ./CiDotNet.AngularCalc/ClientApp/Dockerfile
+          file: ./CiDotNet.AngularCalc/ClientApp/Dockerfile
