@@ -1,9 +1,8 @@
 FROM node:14.9.0-alpine3.10 AS builder
 
-COPY ./CiDotNet.AngularCalc/ClientApp/ .
+WORKDIR /app
+COPY ./CiDotNet.AngularCalc/ClientApp/  .
 RUN npm install
-RUN mkdir /app && mv ./node_modules ./app
-
 RUN npm run ng build -- --prod --output-path=dist
 
 FROM nginx:1.19.2-alpine
