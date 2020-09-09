@@ -11,4 +11,4 @@ Examples for schort CI in .NET presentation
 1. Api image:
 `docker build -t repo_name/angular-calc-api .`
 2. Angualr app image:
-`docker build -f DockerfileAngular -t repo_name/angular-calc-app .`
+`docker build -f Dockerfile-angular -t repo_name/angular-calc-app .`
