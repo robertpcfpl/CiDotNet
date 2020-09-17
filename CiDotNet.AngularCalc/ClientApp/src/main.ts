@@ -5,7 +5,7 @@ import { isDevMode } from '@angular/core';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-const api_prod_url= 'http://localhost:4250/'
+const api_prod_url= 'http://localhost:4280/'
 export function getBaseUrl() {
   if(isDevMode()) {
     return document.getElementsByTagName('base')[0].href;
